@@ -395,6 +395,113 @@ def save_corpus(all_tokens: list[list[str]], stats: dict):
     print(f"  [✓] Statistics saved          → {stats_path}")
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# FALLBACK: OFFLINE DEMO DATA
+# (in case iitj.ac.in is unreachable — simulate realistic corpus)
+# ══════════════════════════════════════════════════════════════════════════════
+
+DEMO_TEXTS = {
+    "academic_regulations": [
+        """The academic regulations of Indian Institute of Technology Jodhpur govern the conduct
+        of all undergraduate and postgraduate programs. Students are required to maintain a minimum
+        cumulative grade point average of 5.0 on a 10 point scale to continue their enrollment.
+        The Senate of IIT Jodhpur is the supreme academic body responsible for maintaining standards
+        of instruction examination and research in the institute. Each student must register for
+        courses every semester within the stipulated registration period. Late registration is
+        permitted with a fine as specified by the academic office. A student who does not register
+        within the specified period without prior permission may be deregistered. The minimum
+        credit requirement for the Bachelor of Technology program is one hundred and sixty credits
+        distributed across eight semesters. Courses are classified as core courses elective courses
+        and humanities and social sciences courses. A student must clear all core courses to be
+        eligible for graduation. The grading system follows a ten point scale with letter grades
+        from AA to FF where FF indicates failure. A student who fails a core course must repeat
+        the course in the subsequent semester it is offered. Academic integrity is of utmost
+        importance and plagiarism in any form shall be treated as a serious academic misconduct.""",
+
+        """Postgraduate programs at IIT Jodhpur include Master of Technology Doctor of Philosophy
+        and Master of Science by Research. Admission to M.Tech programs is through GATE score
+        followed by an institute level interview. PhD admissions are held twice a year in July
+        and January. Research scholars are expected to complete their coursework in the first year
+        and subsequently focus on research. The thesis advisory committee guides each research
+        scholar throughout the doctoral program. A PhD scholar must publish at least one paper
+        in a reputed journal before submission of the thesis. The maximum duration for completing
+        a PhD degree is six years from the date of joining. Financial support in the form of
+        scholarship is provided to full time PhD and M.Tech students as per government norms.
+        Students are encouraged to participate in national and international conferences and
+        present their research findings to the broader scientific community."""
+    ],
+
+    "departments": [
+        """The Department of Computer Science and Engineering at IIT Jodhpur offers undergraduate
+        postgraduate and doctoral programs. The department has state of the art computing facilities
+        including high performance computing clusters and dedicated research laboratories. Research
+        areas in the department span artificial intelligence machine learning natural language
+        processing computer vision data science cybersecurity distributed systems and theoretical
+        computer science. Faculty members in the department are actively engaged in sponsored
+        research projects funded by government agencies such as DST DRDO and MeitY as well as
+        industry collaborations. The department hosts regular seminars workshops and hackathons
+        to foster a culture of innovation among students. Alumni of the department are placed in
+        leading technology companies and research institutions worldwide. The B.Tech curriculum
+        in CSE includes courses on programming data structures algorithms operating systems
+        database management computer networks and software engineering.""",
+
+        """The Department of Electrical Engineering offers programs focusing on power systems
+        signal processing communications and VLSI design. Laboratories in the department include
+        the power electronics lab analog and digital circuits lab embedded systems lab and the
+        communications lab. The department collaborates with industry partners for curriculum
+        development and internship opportunities. Research in the department includes renewable
+        energy systems smart grids biomedical signal processing and advanced semiconductor devices.
+        Students participate in national competitions such as Smart India Hackathon and Texas
+        Instruments Innovation Challenge with commendable results. The department also offers
+        interdisciplinary courses jointly with physics mathematics and computer science departments
+        to provide students a broad technical foundation. Faculty members have received funding
+        from agencies including DST SERB and the Ministry of New and Renewable Energy.""",
+
+        """The Department of Mechanical Engineering at IIT Jodhpur covers areas including thermal
+        engineering manufacturing engineering solid mechanics and design engineering. The
+        computational fluid dynamics lab advanced manufacturing lab and robotics lab support
+        both undergraduate and postgraduate research activities. Projects in the department often
+        address challenges relevant to the desert ecosystem of Rajasthan including solar thermal
+        systems water harvesting technologies and dust mitigation strategies for solar panels.
+        Students in mechanical engineering undertake an eight week industrial training program
+        before their final year to gain practical experience. The department hosts an annual
+        technical festival where students showcase their design projects and prototypes."""
+    ],
+
+    "research": [
+        """IIT Jodhpur has established several centres of excellence to foster interdisciplinary
+        research. The Centre for Artificial Intelligence and Data Science conducts research in
+        machine learning deep learning computer vision and their applications in healthcare
+        agriculture and smart cities. The Desert Technology Centre focuses on technologies
+        relevant to arid regions including solar energy water conservation and sustainable
+        construction materials. The Biotechnology and Bioinformatics research group works on
+        genomics protein structure prediction and drug discovery using computational methods.
+        The institute has active collaborations with premier national institutions including
+        ISRO BARC and CSIR laboratories as well as international universities in Germany Japan
+        France and the United States. Research funding at the institute has grown significantly
+        with total externally funded projects exceeding two hundred crore rupees. The institute
+        encourages faculty to file patents and several patents have been granted in areas of
+        solar energy storage materials and biomedical devices.""",
+    ],
+
+    "institute_info": [
+        """Indian Institute of Technology Jodhpur was established in 2008 as one of the eight new
+        IITs set up by the Government of India to expand higher technical education in the country.
+        The institute is located in the historic city of Jodhpur in the state of Rajasthan which
+        is the gateway to the Thar Desert. The permanent campus spans over eight hundred acres
+        and features modern academic and residential infrastructure. The institute follows a vision
+        of excellence in education research and innovation with a commitment to societal impact.
+        The mission of IIT Jodhpur is to provide world class technical education develop technologies
+        for sustainable development and nurture leaders in science engineering and management.
+        The institute senate governing board and finance committee oversee academic administrative
+        and financial matters respectively. The student body at IIT Jodhpur is diverse with
+        students from across India and several foreign students enrolled in various programs.
+        Cultural technical and sports festivals organized by student bodies provide a vibrant
+        campus life. The placement cell facilitates campus recruitment with leading companies
+        visiting the institute every year for both internship and full time recruitment.""",
+    ]
+}
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # MAIN PIPELINE
