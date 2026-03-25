@@ -3,9 +3,9 @@
   PROBLEM 1 — LEARNING WORD EMBEDDINGS FROM IIT JODHPUR DATA
   TASK 1: DATASET PREPARATION
   
-  Name   : [Your Name]
-  Roll No: [Your Roll No]
-  Course : Natural Language Processing / ML
+  Name   : Shahil Sharma
+  Roll No: B22CS048
+  Course : Natural Language Processing 
   Date   : March 2026
 ============================================================
 
